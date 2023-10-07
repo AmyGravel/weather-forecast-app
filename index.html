@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/1cc32cd3b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <!-- Search Bar -->
+          <form id="city-search" class="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  id="search-input"
+                  type="text"
+                  placeholder="Type city here.."
+                  class="form-control"
+                />
+              </div>
+              <div class="col-3 submit-button">
+                <input type="submit" value="Search" class="btn btn-light" />
+              </div>
+            </div>
+          </form>
+          <!-- City and Current Date and Time -->
+          <h1 id="city">Leeds</h1>
+          <h2 id="current-date-and-time">Saturday 5th August, 15:42</h2>
+          <!-- Current Weather -->
+          <div class="current-weather-container">
+            <div class="row">
+              <div class="current-weather col-6">
+                <div class="row">
+                  <div class="col-4">
+                    <i class="fas fa-solid fa-cloud large-weather-icon"></i>
+                  </div>
+                  <div class="col-4">
+                    <h3 id="current-temperature" class="current-temperature">
+                      13
+                    </h3>
+                  </div>
+                  <div class="col-4 temperature-units">
+                    <a id="celsius-link" class="celsius-units" href="#"
+                      >&deg;C</a
+                    >
+                    <i class="fas fa-solid fa-minus unit-divider"></i>
+                    <a id="fahrenheit-link" class="fahrenheit-units" href="#"
+                      >F</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div>
+                  <ul class="weather-list">
+                    <li>Precipitation: 57%</li>
+                    <li>Wind: 8kmph</li>
+                    <li>Humidity: 72%</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Weather Forecast -->
+          <div class="weather-forecast-wrapper"></div>
+          <div class="row">
+            <div class="card col weather-day">
+              <div class="row card-body">
+                <h5 class="col-12 card-title">Sat 5</h5>
+                <i class="col-12 fas fa-solid fa-cloud small-weather-icon"></i>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  14&deg;C
+                </h6>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  9&deg;C
+                </h6>
+              </div>
+            </div>
+            <div class="card col weather-day">
+              <div class="row card-body">
+                <h5 class="col-12 card-title">Sun 6</h5>
+                <i
+                  class="col-12 fas fa-solid fa-cloud-rain small-weather-icon"
+                ></i>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  17&deg;C
+                </h6>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  10&deg;C
+                </h6>
+              </div>
+            </div>
+            <div class="card col weather-day">
+              <div class="row card-body">
+                <h5 class="col-12 card-title">Mon 7</h5>
+                <i class="col-12 fas fa-solid fa-sun small-weather-icon"></i>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  18&deg;C
+                </h6>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  10&deg;C
+                </h6>
+              </div>
+            </div>
+            <div class="card col weather-day">
+              <div class="row card-body">
+                <h5 class="col-12 card-title">Tues 8</h5>
+                <i
+                  class="col-12 fas fa-solid fa-cloud-rain small-weather-icon"
+                ></i>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  18&deg;C
+                </h6>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  12&deg;C
+                </h6>
+              </div>
+            </div>
+            <div class="card col weather-day">
+              <div class="row card-body">
+                <h5 class="col-12 card-title">Wed 9</h5>
+                <i class="col-12 fas fa-solid fa-wind small-weather-icon"></i>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  20&deg;C
+                </h6>
+                <h6 class="col-6 card-subtitle mb-2 text-body-secondary">
+                  14&deg;C
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p>Coded by Amy Gravel</p>
+        </footer>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
